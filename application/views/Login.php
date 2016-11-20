@@ -86,24 +86,43 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
       <div class="lock-container">
         <div class="panel panel-default text-center paper-shadow" data-z="0.5">
           <h1 class="text-display-1 text-center margin-bottom-none">Sign In</h1>
-          <img src="<?php echo base_url();?>assets/images/people/110/guy-5.jpg" class="img-circle width-80">
+          <img src="<?php echo base_url();?>assets/images/favicon.ico" class="img-circle width-80">
+          <?php echo validation_errors(); ?>
+          <?php echo form_open('Verifylogin'); ?>
           <div class="panel-body">
             <div class="form-group">
               <div class="form-control-material">
-                <input class="form-control" id="username" type="text" placeholder="Username">
+                <input class="form-control" id="username" type="text" placeholder="Username" type="text" size="20" id="username" name="username" />
                 <label for="username">Username</label>
               </div>
             </div>
             <div class="form-group">
               <div class="form-control-material">
-                <input class="form-control" id="password" type="password" placeholder="Enter Password">
+                <input class="form-control" id="password" type="password" placeholder="Enter Password" type="password" size="20" id="password" name="password"/>
                 <label for="password">Password</label>
+                
               </div>
             </div>
-
-            <a href="<?php echo base_url();?>index.php/Welcome" class="btn btn-primary">Login <i class="fa fa-fw fa-unlock-alt"></i></a>
-            <a href="#" class="forgot-password">Forgot password?</a>
-            <a href="sign-up.html" class="link-text-color">Create account</a>
+             <label class="col-sm-3 control-label">Login Sebagai</label>
+            <div  class="col-sm-9">
+                    <select id="level" name="level" class="selectpicker" data-style="btn-white" data-live-search="false" data-size="5">
+                      <option value="Admin">Admin</option>
+                      <option value="siswa">Mahasiswa</option>
+                      <option value="Dosen">Dosen</option>
+                    </select>
+                  </div>
+            <input type="submit" value="Login" class="btn btn-primary"></input>
+            </form>
+            <script>
+function myFunctionAkun() {
+    alert("Hubungi Admin untuk mendapatkan akun");
+}
+function myFunction() {
+    alert("Hubungi Admin untuk mendapatkan password");
+}
+</script>
+            <a onclick="myFunction()" class="forgot-password">Forgot password?</a>
+            <a onclick="myFunctionAkun()" class="link-text-color">Create account</a>
           </div>
         </div>
       </div>

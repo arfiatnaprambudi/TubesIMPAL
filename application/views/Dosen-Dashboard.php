@@ -14,6 +14,20 @@
                                     <h4 class="text-headline margin-none">Materi Perkuliahan</h4>
                                     <p class="text-subhead text-light">Materi Perkuliahan terakhir anda:</p>
                                 </div>
+                                 <ul class="list-group">
+                  <li class="list-group-item media v-middle">
+                    <div class="media-body">
+                      <a href="website-instructor-course-edit-course.html" class="text-subhead list-group-link">Brute Force</a>
+                    </div>
+                    
+                  </li>
+                  <li class="list-group-item media v-middle">
+                    <div class="media-body">
+                      <a href="website-instructor-course-edit-course.html" class="text-subhead list-group-link">Dynamic Programming</a>
+                    </div>
+                  
+                  </li>
+                </ul>
                 
                                 <div class="panel-footer text-right">
                                     <a href="<?php echo base_url();?>index.php/DaftarMateriDosen" class="btn btn-white paper-shadow relative" data-z="0" data-hover-z="1" data-animated>Lihat Semua materi</a>
@@ -79,7 +93,20 @@
                                     <h4 class="text-headline margin-none">Tugas Perkuliahan</h4>
                                     <p class="text-subhead text-light">Tugas Perkuliahan terkahir anda:</p>
                                 </div>
-                
+                 <ul class="list-group">
+                  <li class="list-group-item media v-middle">
+                    <div class="media-body">
+                      <a href="website-instructor-course-edit-course.html" class="text-subhead list-group-link">Latihan 1 Brute Force</a>
+                    </div>
+                    
+                  </li>
+                  <li class="list-group-item media v-middle">
+                    <div class="media-body">
+                      <a href="website-instructor-course-edit-course.html" class="text-subhead list-group-link">Latihan 2 Dynamic Programming</a>
+                    </div>
+                  
+                  </li>
+                </ul>
                                 <div class="panel-footer text-right">
                                     <a href="<?php echo base_url();?>index.php/DaftarTugasDosen" class="btn btn-white paper-shadow relative" data-z="0" data-hover-z="1" data-animated>Lihat Semua tugas</a>
                                     <a href="<?php echo base_url();?>index.php/UploadTugas" class="btn btn-primary paper-shadow relative" data-z="0" data-hover-z="1" data-animated>UPLOAD TUGAS  <i class="fa fa-plus"></i></a>
@@ -104,7 +131,7 @@
                 <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/DaftarTugasDosen">Daftar Tugas</a></li>
                 <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/DaftarQuizDosen">Daftar Quiz</a></li>
                                 <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/ProfileDosen">Profil</a></li>
-                                <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/Login"><span>Keluar</span></a></li>
+                                <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/HomeDosen/logout"><span>Keluar</span></a></li>
                             </ul>
                         </div>
                     </div>

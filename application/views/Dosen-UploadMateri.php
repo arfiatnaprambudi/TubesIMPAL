@@ -50,7 +50,7 @@
                 <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/DaftarTugasDosen">Daftar Tugas</a></li>
                 <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/DaftarQuizDosen">Daftar Quiz</a></li>
                                 <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/ProfileDosen">Profil</a></li>
-                                <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/Login"><span>Keluar</span></a></li>
+                                <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/HomeDosen/logout"><span>Keluar</span></a></li>
                             </ul>
                         </div>
                     </div>

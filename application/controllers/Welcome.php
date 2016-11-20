@@ -18,8 +18,32 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->template->load('Static-Dosen','Dosen-Dashboard');
-	}
+	 function __construct()
+ {
+   parent::__construct();
+ }
+
+ function index()
+ {
+   if($this->session->userdata('logged_in'))
+   {
+     $session_data = $this->session->userdata('logged_in');
+     $data['username'] = $session_data['username'];
+     $this->template->load('Static-Dosen','Dosen-Dashboard', $data);
+   }
+   else
+   {
+     //If no session, redirect to login page
+     redirect('login', 'refresh');
+   }
+ }
+
+ function logout()
+ {
+   $this->session->unset_userdata('logged_in');
+   session_destroy();
+   redirect('home', 'refresh');
+ }
+
 }
+
