@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class DashboardMahasiswa extends CI_Controller {
+class DownloadMateri extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -29,8 +29,7 @@ class DashboardMahasiswa extends CI_Controller {
    {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
-     $data['level'] = $session_data['level'];
-     $this->template->load('static-mahasiswa','mahasiswa-dashboard', $data);
+     $this->template->load('Static-mahasiswa','mahasiswa-DownloadMateri', $data);
    }
    else
    {
@@ -43,8 +42,7 @@ class DashboardMahasiswa extends CI_Controller {
  {
    $this->session->unset_userdata('logged_in');
    session_destroy();
-   redirect('HomeMahasiswa', 'refresh');
+   redirect('home', 'refresh');
  }
 
 }
-

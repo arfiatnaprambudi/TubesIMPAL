@@ -29,6 +29,7 @@ class BuatQuizDosen extends CI_Controller {
    {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
+     $data['level'] = $session_data['level'];
      $this->template->load('Static-Dosen','Dosen-BuatQuiz', $data);
    }
    else
@@ -42,7 +43,7 @@ class BuatQuizDosen extends CI_Controller {
  {
    $this->session->unset_userdata('logged_in');
    session_destroy();
-   redirect('home', 'refresh');
+   redirect('HomeDosen', 'refresh');
  }
 
 }

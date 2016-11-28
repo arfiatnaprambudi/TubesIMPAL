@@ -103,12 +103,12 @@
                         </div>
                         <div class="panel-body list-group">
                             <ul class="list-group list-group-menu">
-                                <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/Welcome">Dashboard</a></li>
+                                <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/HomeMahasiswa">Dashboard</a></li>
                                 <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/DaftarMateriMahasiswa"> Materi</a></li>
 								<li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/DaftarTugasMahasiswa">Daftar Tugas</a></li>
 								<li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/DaftarQuizMahasiswa">Daftar Quiz</a></li>
                                 <li class="list-group-item active"><a class="link-text-color" href="<?php echo base_url();?>index.php/ProfileMahasiswa">Profil</a></li>
-                                <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/Login"><span>Keluar</span></a></li>
+                                <li class="list-group-item"><a class="link-text-color" href="<?php echo base_url();?>index.php/HomeMahasiswa/logout"><span>Keluar</span></a></li>
                             </ul>
                         </div>
                     </div>

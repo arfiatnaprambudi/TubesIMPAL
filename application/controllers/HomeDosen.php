@@ -8,6 +8,14 @@ class HomeDosen extends CI_Controller {
  }
 
 
+function edit_content()
+    {
+        parent::__construct();
+        $this->load->model('user_matkul');
+        $result = $this->user_matkul->cekMatkul($username);
+    }
+
+
  function index()
  {
    if($this->session->userdata('logged_in'))
@@ -15,6 +23,14 @@ class HomeDosen extends CI_Controller {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
      $data['level'] = $session_data['level'];
+     $username = $data['username'];
+     $this->load->model('user_matkul');
+     $result = $this->user_matkul->cekMatkul($username);
+     $this->load->vars('r', $result);
+     //data['result'] = $result;
+     $this->load->model('MateriMatkul');
+     $hasil = $this->MateriMatkul->cekMateri($username);
+     $this->load->vars('h', $hasil);
      $this->template->load('Static-Dosen','Dosen-Dashboard', $data);
    }
    else
@@ -30,7 +46,7 @@ class HomeDosen extends CI_Controller {
    session_destroy();
    redirect('HomeDosen', 'refresh');
  }
-
+ 
 }
 
 ?>

@@ -29,6 +29,11 @@ class DaftarMateriDosen extends CI_Controller {
    {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
+     $data['level'] = $session_data['level'];
+     $username = $data['username'];
+     $this->load->model('DaftarMatkul');
+     $result = $this->DaftarMatkul->cekDaftarMateri($username);
+     $this->load->vars('r', $result);
      $this->template->load('Static-Dosen','Dosen-DaftarMateri', $data);
    }
    else
@@ -42,7 +47,7 @@ class DaftarMateriDosen extends CI_Controller {
  {
    $this->session->unset_userdata('logged_in');
    session_destroy();
-   redirect('home', 'refresh');
+   redirect('HomeDosen', 'refresh');
  }
 
 }

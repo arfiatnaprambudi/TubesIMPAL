@@ -29,6 +29,10 @@ class Welcome extends CI_Controller {
    {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
+     $data['level'] = $session_data['level'];
+     $this->load->model('user_matkul');
+     $result = $this->user_matkul->cekMatkul($username);
+     $data['result'] = $result;
      $this->template->load('Static-Dosen','Dosen-Dashboard', $data);
    }
    else

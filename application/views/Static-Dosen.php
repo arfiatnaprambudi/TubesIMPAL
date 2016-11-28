@@ -58,7 +58,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand navbar-brand-logo">
-                    <a class="svg" href="<?php echo base_url();?>index.php/Welcome">
+                    <a class="svg" href="<?php echo base_url();?>index.php/HomeDosen">
                         <svg viewBox="0 0 106 64" height="100%" width="100%" preserveAspectRatio="xMidYMid meet">
                             <path d="M4.731,36.187h8.234v3.414H0.279V20.481h4.452V36.187z" />
                             <path d="M21.094,39.878c-2.093,0-3.763-0.658-5.01-1.971c-1.248-1.313-1.872-2.959-1.872-4.938v-0.498
@@ -109,7 +109,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
             <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav navbar-nav-margin-left">
           <li class="dropdown">
-            <a href="<?php echo base_url();?>index.php/Welcome">Dashboard</a>
+            <a href="<?php echo base_url();?>index.php/HomeDosen">Dashboard</a>
             
           </li>
           <li class="dropdown">

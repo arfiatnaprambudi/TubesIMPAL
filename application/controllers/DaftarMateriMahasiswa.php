@@ -1,8 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class DashboardDosen extends CI_Controller {
-
+class DaftarMateriMahasiswa extends CI_Controller {
 	/**
 	 * Index Page for this controller.
 	 *
@@ -29,7 +28,7 @@ class DashboardDosen extends CI_Controller {
    {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
-     $this->template->load('Static-Dosen','Dosen-Dashboard', $data);
+     $this->template->load('Static-mahasiswa','mahasiswa-DaftarMateri', $data);
    }
    else
    {
@@ -42,8 +41,7 @@ class DashboardDosen extends CI_Controller {
  {
    $this->session->unset_userdata('logged_in');
    session_destroy();
-   redirect('home', 'refresh');
+   redirect('HomeMahasiswa', 'refresh');
  }
 
 }
-
